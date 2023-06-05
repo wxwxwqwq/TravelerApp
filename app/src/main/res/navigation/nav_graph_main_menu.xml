@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="Screens.MainMenuFragment"
+        android:label="MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_registrationActivity"
+            app:destination="@id/registrationActivity" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_usingActivity"
+            app:destination="@id/usingActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/registrationActivity"
+        android:name="com.example.travelapp.RegistrationActivity"
+        android:label="activity_registration"
+        tools:layout="@layout/activity_registration" />
+
+    <activity
+        android:id="@+id/usingActivity"
+        android:name="com.example.travelapp.UsingActivity"
+        android:label="UsingActivity"
+        tools:layout="@layout/activity_using"/>
+
+</navigation>

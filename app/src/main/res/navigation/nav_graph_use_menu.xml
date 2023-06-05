@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_use_menu"
+    app:startDestination="@id/menuUseFragment">
+
+    <fragment
+        android:id="@+id/menuUseFragment"
+        android:name="Screens.Using.FirstUse.MenuUseFragment"
+        android:label="MenuUseFragment"
+        tools:layout="@layout/fragment_menu_use">
+        <action
+            android:id="@+id/action_menuUseFragment_to_foodListUseFragment"
+            app:destination="@id/foodListUseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodListUseFragment"
+        android:name="Screens.Using.FirstUse.FoodListUseFragment"
+        android:label="FoodListUseFragment" >
+        <action
+            android:id="@+id/action_foodListUseFragment_to_menuUseFragment"
+            app:destination="@id/menuUseFragment" />
+    </fragment>
+</navigation>

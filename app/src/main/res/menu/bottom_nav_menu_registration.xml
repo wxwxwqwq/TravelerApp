@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstAddFragment"
+        android:icon="@drawable/info"
+        android:title="Основное"/>
+
+    <item
+        android:id="@+id/secondAddFragment"
+        android:icon="@drawable/traveler"
+        android:title="Участники"/>
+
+    <item
+        android:id="@+id/thirdAddFragment"
+        android:icon="@drawable/food"
+        android:title="Меню"/>
+</menu>

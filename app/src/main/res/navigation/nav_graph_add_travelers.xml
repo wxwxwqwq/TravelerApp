@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment_add_travelers"
+    app:startDestination="@id/travelerListFragment">
+    <fragment
+        android:id="@+id/travelerListFragment"
+        android:name="Screens.Registration.SecondAdd.TravelerListFragment"
+        android:label="fragment_traveler_list"
+        tools:layout="@layout/fragment_traveler_list" >
+        <action
+            android:id="@+id/action_travelerListFragment_to_travelerAddFragment"
+            app:destination="@id/travelerAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/travelerAddFragment"
+        android:name="Screens.Registration.SecondAdd.TravelerAddFragment"
+        android:label="fragment_traveler_add"
+        tools:layout="@layout/fragment_traveler_add" >
+        <action
+            android:id="@+id/action_travelerAddFragment_to_travelerListFragment"
+            app:destination="@id/travelerListFragment" />
+    </fragment>
+</navigation>

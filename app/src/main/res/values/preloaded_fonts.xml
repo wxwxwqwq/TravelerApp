@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/arbutus</item>
+        <item>@font/itim</item>
+        <item>@font/kalam_bold</item>
+        <item>@font/leckerli_one</item>
+        <item>@font/montserrat_bold</item>
+        <item>@font/muli_black_italic</item>
+        <item>@font/numans</item>
+        <item>@font/nunito_black</item>
+        <item>@font/nunito_black_italic</item>
+        <item>@font/nunito_bold</item>
+        <item>@font/nunito_extrabold_italic</item>
+        <item>@font/nunito_sans_extrabold_italic</item>
+        <item>@font/pacifico</item>
+        <item>@font/permanent_marker</item>
+        <item>@font/ubuntu_bold</item>
+    </array>
+</resources>

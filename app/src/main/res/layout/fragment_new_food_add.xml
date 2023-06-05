@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Screens.Registration.ThirdAdd.Food.NewFoodAddFragment">
+
+    <ImageView
+        android:id="@+id/BackBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/distributionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:text="Добавьте собственный продукт:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputWeight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Название"
+        app:boxStrokeColor="@color/EditTextColor"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/EditTextColor"
+        app:hintTextColor="@color/EditTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distributionTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Калорийность на 100 грамм"
+        app:boxStrokeColor="@color/EditTextColor"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/EditTextColor"
+        app:hintTextColor="@color/EditTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputWeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/InputCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/GenderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="Категория"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+
+    <RadioGroup
+        android:id="@+id/ChooseCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GenderTitle"
+        >
+
+        <RadioButton
+            android:id="@+id/Seasoning"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Приправа"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/Snack"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Закуска"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/MainCourse"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Основной продукт"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/Drink"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Напиток"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/Warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Введена не вся информация"
+        android:textColor="#FF0000"
+        android:textSize="11sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Create"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Добавить"
+        app:backgroundTint="@color/activeBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChooseCategory" />
+
+    <TextView
+        android:id="@+id/DeltextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Удалите продукт:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Create" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSpinner"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Выберите продукт"
+        app:boxBackgroundColor="@color/bgColor"
+        app:boxStrokeColor="@color/EditTextColor"
+        app:endIconCheckable="false"
+        app:endIconMode="dropdown_menu"
+        app:endIconTint="@color/EditTextColor"
+        app:hintTextColor="@color/EditTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/Delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeltextTitle">
+
+        <AutoCompleteTextView
+            android:id="@+id/DelFood"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:paddingStart="8.3dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/DelMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="Удалено"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputSpinner" />
+
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="Удалить"
+        app:backgroundTint="@color/activeBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DeltextTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
